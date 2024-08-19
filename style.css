@@ -126,8 +126,16 @@ nav.sticky .menu-btn{
 .home-section img{
   height: 500px;
   margin-top: 100px;
-  
+  animation: slide-up 2s ease-out forwards; 
+  opacity: 0;
+            transform: translateY(100px);
 }
+@keyframes slide-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+          }
 .home .home-content{
   width: 90%;
   height: 100%;
@@ -193,6 +201,8 @@ nav.sticky .menu-btn{
  I'm Selecting Directly 'Section Tag' and 'Class'  */
 section{
   padding-top: 40px;
+  padding-bottom: 30px;
+   background: #F0F8FF 
 }
 section .content{
   width: 80%;
@@ -281,52 +291,35 @@ section .button button:hover{
 
  /* My Skills CSS */
  .skills{
-   background: #F0F8FF;
+background-color: white;
  }
  .skills .content{
    padding: 40px 0;
  }
- .skills .title{
-  text-align: ;
+ .skills .topic{
+  text-align: center;
  }
  .skills .skills-details{
-   display: flex;
-   justify-content: space-between;
+
    align-items: center;
  }
  .skills-details .text{
-   width: 50%;
+   width: 100%;
  }
  .skills-details p{
    color: #0E2431;
-   text-align: justify;
+   text-align:center;
  }
-.skills .skills-details .experience{
-  display: flex;
-  align-items: center;
-  margin: 0 10px;
-}
-.skills-details .experience .num{
-  color: #0E2431;
-  font-size: 80px;
-}
-.skills-details .experience .exp{
-  color: #0E2431;
-  margin-left: 20px;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0 6px;
-}
-.skills-details .boxes{
-  width: 45%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
+
+
 .skills-details .box{
-  width: calc(100% / 2 - 20px);
   margin: 20px 0;
+ 
 }
+.skills-details .box img{
+  width: 100%;
+}
+
 .skills-details .boxes .topic{
   font-size: 20px;
   color: #4070f4;
@@ -382,16 +375,45 @@ section .button button:hover{
 .services .boxes .box:hover p{
   color: #fff;
 }
+
+/* hire me */
+.hire-me{
+  background-image: url(./Images/blo3.jpg);
+  height: 50vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Ubuntu', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.hire-me .hire-me-description{
+ color: rgb(255, 255, 255);
+ padding: 40px;
+ width: 80%;
+ text-align: center;
+ font-size: larger;
+ font-weight: 600;
+}
+.hire-me .hire-me-title{
+  text-align: center;
+  font-size:40px;
+  font-weight: 800;
+  color:yellow;
+}
 /* Contact Me CSS */
 .contact{
   background: #F0F8FF;
 }
 .contact .content{
   margin: 0 auto;
-  padding: 30px 0;
+  padding: 30px 10px;
 }
 .contact .text{
-  width: 80%;
+  width: 100%;
   text-align: center;
   margin: auto;
 }
