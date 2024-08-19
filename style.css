@@ -379,7 +379,7 @@ background-color: white;
 /* hire me */
 .hire-me{
   background-image: url(./Images/blo3.jpg);
-  height: 50vh;
+  height: 60vh;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -487,6 +487,7 @@ footer .text span a:hover{
   nav .navbar{
     width: 90%;
   }
+ 
   nav .navbar .menu{
     position: fixed;
     left: -100%;
@@ -519,11 +520,19 @@ footer .text span a:hover{
   .navbar .menu .cancel-btn{
     display: block;
   }
+  .home-section{
+    flex-direction: column;
+    padding: 10px;
+  }
+  .home-section img{
+width: 400px;
+height: 400px;
+  }
   .home .text-two{
-    font-size: 65px;
+    font-size: 60px;
   }
   .home .text-three{
-    font-size: 35px;
+    font-size: 30px;
   }
   .skills .skills-details{
     align-items: center;
@@ -559,4 +568,5 @@ footer .text span a:hover{
     font-size: 50px;
     color: #4070f4;
   }
+  
 }
