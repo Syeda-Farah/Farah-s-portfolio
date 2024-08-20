@@ -109,12 +109,9 @@ nav.sticky .menu-btn{
 
 /* home section styling */
 .home{
-  height: 100vh;
+  height: 120vh;
   width: 100%;
   background-color:rgb(255, 247, 253) ;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   font-family: 'Ubuntu', sans-serif;
 }
 .home-section{
@@ -148,6 +145,46 @@ nav.sticky .menu-btn{
   font-size: 45px;
   color: #0E2431;
 }
+.home span{
+  border: #000301 1px;
+  color: rgb(36, 205, 171);
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideIn 3s forwards, lightEffect 2s 1s infinite alternate;
+    /* lightEffect starts after slideIn completes and repeats infinitely */
+  }
+  
+  @keyframes slideIn {
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes lightEffect {
+    from {
+      text-shadow: 
+        0 0 3px #080808, 
+        0 0 5px #0c0c0c, 
+        0 0 8px rgb(2, 47, 20), 
+        0 0 10px rgb(35, 247, 120), 
+        0 0 15px rgb(36, 247, 121), 
+        0 0 20px rgb(7, 247, 103), 
+        0 0 25px rgb(80, 255, 150) ;
+    }
+    to {
+      text-shadow: 
+        0 0 3px #0a0a0a, 
+        0 0 5px #01311f, 
+        0 0 8px #014a33, 
+        0 0 15px #4ecfa6, 
+        0 0 25px #5becbe, 
+        0 0 30px #5becbe, 
+        0 0 40px #83f6d1;
+    }
+  }
+  
 .home .text-two{
   color: #0E2431;
   font-size: 75px;
@@ -155,12 +192,14 @@ nav.sticky .menu-btn{
   margin-left: -3px;
 }
 .home .text-three{
-  font-size: 40px;
+  font-size: 30px;
+  font-weight: 500;
   margin: 10px 0;
-  color: #4070f4;
+  color: #614dfa;
 }
 .home .text-four{
   font-size: 23px;
+  font-weight: 500;
   margin: 10px 0;
   color: #0E2431;
 }
@@ -246,8 +285,8 @@ section .title span::after{
   width: 45%;
 }
 .about .left img{
-  height: 300px;
-  width: 450px;
+  height: 320px;
+  width: 340px;
   object-fit: cover;
   border-radius: 12px;
 }
@@ -405,37 +444,36 @@ background-color: white;
   color:yellow;
 }
 /* Contact Me CSS */
-.contact{
-  background: #F0F8FF;
-}
-.contact .content{
-  margin: 0 auto;
-  padding: 30px 10px;
-}
-.contact .text{
-  width: 100%;
-  text-align: center;
-  margin: auto;
-}
+
 
 /* Footer CSS */
 footer{
-  background: #4070f4;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+  background: #000301;
   padding: 15px 0;
   text-align: center;
   font-family: 'Poppins', sans-serif;
 }
-footer .text span{
-  font-size: 17px;
-  font-weight: 400;
+
+footer .footer-heading{
+  font-size: 40px;
+  font-weight: 800;
   color: #fff;
+  padding: 0px 30PX;
 }
-footer .text span a{
+footer .icons{
+  padding: 0px 60px;
+}
+footer .connect-icon{
+  padding: 10px;
+  font-size: larger;
   font-weight: 500;
   color: #FFF;
 }
-footer .text span a:hover{
-  text-decoration: underline;
+footer .connect-icon:hover{
+ color: #0b2258;
 }
 /* Scroll TO Top Button CSS */
 .scroll-button a{
@@ -443,10 +481,10 @@ footer .text span a:hover{
   bottom: 20px;
   right: 20px;
   color: #fff;
-  background: #4070f4;
+  background: #04035b;
   padding: 7px 12px;;
   font-size: 18px;
-  border-radius: 6px;
+  border-radius: 50%;
   box-shadow: rgba(0, 0, 0, 0.15);
   display: none;
 }
@@ -528,12 +566,17 @@ footer .text span a:hover{
 width: 400px;
 height: 400px;
   }
+  .home .text-one {
+padding-top: 10px;
+font-size: 32px;
+  }
   .home .text-two{
-    font-size: 60px;
+    font-size: 55px;
   }
   .home .text-three{
-    font-size: 30px;
+    font-size: 25px;
   }
+ 
   .skills .skills-details{
     align-items: center;
     justify-content: center;
@@ -554,6 +597,9 @@ height: 400px;
   }
   .contact .text{
     width: 100%;
+}
+.footer{
+  flex-direction: column;
 }
 }
 
