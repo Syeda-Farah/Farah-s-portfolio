@@ -417,7 +417,7 @@ background-color: white;
 
 /* hire me */
 .hire-me{
-  background-image: url(./Images/blo3.jpg);
+  background-image: url(../Images/blo3.jpg);
   height: 60vh;
   width: 100%;
   background-repeat: no-repeat;
